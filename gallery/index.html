@@ -6,15 +6,14 @@
       <meta name="viewport" content="width=device-width, user-scalable=no" />
       <title>阿丰哥哥的相册 - Home</title>
       <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
-      <link rel="stylesheet" href="public/lightslider/css/lightslider.min.css" />
       <link rel="stylesheet" href="public/videojs/video-js.min.css" />
       <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
       <link rel="stylesheet" href="public/core.css" />
       <link rel="stylesheet" href="public/theme.css" />
-      <link rel="stylesheet" href="public/justifiedgallery/justifiedGallery.min.css" />
   </head>
 
   <body>
+
     
     <div id="container">
     
@@ -32,45 +31,40 @@
     <a class="breadcrumb-item" href="index.html">Home</a>
       </nav>
     
-    
       <!--
         Nested albums, if any
       -->
-      <div id="albums" class="justified-gallery">
-            <a href="PHOTOGRAPH.html">
-              <img src="media/small/PHOTOGRAPH/AURORA/2022_10_31_15_29_IMG_3312.JPG" alt="">
-              <div class="caption" style="display: inline-block">
-                <h3>PHOTOGRAPH</h3>
-                <div class="summary">3 albums, 26 photos</div>
-              </div>
-            </a>
-            <a href="GUNPLA.html">
-              <img src="media/small/GUNPLA/battlefield/102A0432.JPG" alt="">
-              <div class="caption" style="display: inline-block">
-                <h3>GUNPLA</h3>
-                <div class="summary">4 albums, 41 photos</div>
-              </div>
-            </a>
-            <a href="RC.html">
-              <img src="media/small/RC/TUGBOAT686/IMG_4084.JPG" alt="">
-              <div class="caption" style="display: inline-block">
-                <h3>RC</h3>
-                <div class="summary">4 albums, 39 photos</div>
-              </div>
-            </a>
-            <a href="OTHER-MODEL.html">
-              <img src="media/small/OTHER%20MODEL/J20/IMG_3813.JPG" alt="">
-              <div class="caption" style="display: inline-block">
-                <h3>OTHER MODEL</h3>
-                <div class="summary">2 albums, 16 photos</div>
-              </div>
-            </a>
-      </div>
+      <div id="albums">
+    <a href="PHOTOGRAPH.html" style="background-image: url('media/small/PHOTOGRAPH/AURORA/2022_10_31_15_29_IMG_3312.JPG')">
+            <div class="info">
+              <h3>PHOTOGRAPH</h3>
+              <div class="summary">3 albums, 26 photos</div>
+              <div class="date">31 Oct 2022 - 13 Apr 2024</div>
+            </div>
+          </a><a href="GUNPLA.html" style="background-image: url('media/small/GUNPLA/battlefield/102A0432.JPG')">
+            <div class="info">
+              <h3>GUNPLA</h3>
+              <div class="summary">4 albums, 41 photos</div>
+              <div class="date">28 Feb 2024 - 08 Oct 2024</div>
+            </div>
+          </a><a href="RC.html" style="background-image: url('media/small/RC/TUGBOAT686/IMG_4084.JPG')">
+            <div class="info">
+              <h3>RC</h3>
+              <div class="summary">4 albums, 39 photos</div>
+              <div class="date">29 Mar 2024 - 02 Oct 2024</div>
+            </div>
+          </a><a href="OTHER-MODEL.html" style="background-image: url('media/small/OTHER%20MODEL/J20/IMG_3813.JPG')">
+            <div class="info">
+              <h3>OTHER MODEL</h3>
+              <div class="summary">2 albums, 16 photos</div>
+              <div class="date">20 Sep 2024 - 04 Oct 2024</div>
+            </div>
+          </a>  </div>
     
       <!--
         All photos and videos
       -->
-      <ul id="media" class="clearfix justified-gallery">
+      <ul id="media" class="clearfix">
       </ul>
     
       <!--
@@ -80,6 +74,7 @@
       <!--
         Zip file link
       -->
+    
     
       <!--
         Optional footer
@@ -99,13 +94,11 @@
     <script src="public/videojs/video.min.js"></script>
     <!-- LightGallery -->
     <script src="public/lightgallery/js/lightgallery.js"></script>
-    <script src="public/lightslider/js/lightslider.min.js"></script>
     <script src="public/lightgallery/js/lg-autoplay.js"></script>
     <script src="public/lightgallery/js/lg-pager.js"></script>
     <script src="public/lightgallery/js/lg-thumbnail.js"></script>
     <script src="public/lightgallery/js/lg-video.js"></script>
     <script src="public/lightgallery/js/lg-exif.min.js"></script>
-    <script src="public/justifiedgallery/jquery.justifiedGallery.min.js"></script>
 
     <script>
       $(document).ready(function() {
@@ -115,52 +108,10 @@
           loop : false,
           download: true,
           counter: true,
-          videojs: true,
-          exThumbImage: 'data-exthumbimage',
-        });
-
-        // Init justified gallery for albums
-        $("#albums").justifiedGallery({
-          margins: 10,
-          rowHeight: 300,
-          maxRowHeight: 325,
-        });
-
-        // Init justified gallery for photos
-        $("#media").justifiedGallery({
-          selector: '.albumList',
-          waitThumbnailsLoad: false,
-          margins: 10,
-          rowHeight: 250,
-          maxRowHeight: 275,
+          videojs: true
         });
       });
     </script>
-
-      <script id="slider-js" data-interval="">
-        $(document).ready(function () {
-          let waitTime = 1000;
-
-          try {
-            waitTime = parseInt($("#slider-js").data("interval"));
-          } catch (e) {
-            console.error("Invalid speed value for slider: " + waitTime + "\n" + e);
-          }
-
-          $("#lightSlider").lightSlider({
-            auto: true,
-            loop: true,
-            item: 1,
-            gallery: true,
-            pause: waitTime,
-            onSliderLoad: (el) => {
-              el.lightGallery({
-                selector: "#lightSlider li"
-              })
-            }
-          });
-        });
-      </script>
 
 
   </body>
