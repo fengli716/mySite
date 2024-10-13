@@ -1,0 +1,183 @@
+html,body{
+    margin: 0; height: 100%; overflow-x: hidden;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+a:link , a:visited {
+    font-size: 15px;
+    font-family: 'Bangers';
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: rgb(36, 36, 36);
+}
+
+.title-bg {
+    background-color:rgb(36, 36, 36);
+    height: 175px;
+    width: 100%;
+}
+.main-bg {
+    /* background-color:rgb(231, 231, 231); */
+    background-image: linear-gradient(
+        135deg,
+        #d2d2d2 25%,
+        #c9c8c9 25% 50%,
+        #c8b9b6 50% 75%,
+        #9b7f7b 75%
+    ); 
+    width: 100%;
+}
+.white-bg {
+    background-color:rgb(255, 255, 255);
+    width: 100%;
+}
+.end-bg {
+    background-color:rgb(36, 36, 36);
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.LOGO{
+    font-size: 120px;
+    font-family: 'Bangers';
+    font-style:italic;
+    text-align: center;
+    position: relative;
+    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+    background-image: linear-gradient(to right, red, orange);
+      -webkit-background-clip: text;
+      color: transparent;
+    letter-spacing: 4px;
+    top: 0px;
+}
+.LOGO2{
+    font-size: 18px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-style:italic;
+    position: relative;
+    letter-spacing: 8px;
+    color: rgb(36, 36, 36);
+    background-color: white;
+    width: 560px;
+    height: 23px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.sub-title{
+    font-size: 15px;
+    font-family: 'Bangers';
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    left: 170px;
+    top:5px;
+    letter-spacing: 1.5px;
+    color: whitesmoke;
+}
+.main-text{
+    font-size: 24px;
+    font-family: 'Bangers';
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: rgb(36, 36, 36);
+    /* width: 600px; */
+    align-self: center;
+}
+
+.main-text-small-dark{
+    font-size: 18px;
+    font-family: 'Bangers';
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: rgb(36, 36, 36);
+}
+.bottom-text{
+    font-size: 16px;
+    font-family: 'Bangers';
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: rgb(255, 255, 255);
+}
+.multi-center{
+    display:flex;
+    justify-content: center;
+}
+.multi-center2{
+    display:flex;
+    justify-content: center;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+  /* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+  }
+  
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: inherit;
+ }
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(36, 36, 36);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 560px) {
+    .video {
+      width: 100vw; /* The width is 100%, when the viewport is 800px or smaller */
+      height:56.25vw;
+    }
+  .LOGO{
+      font-size: 21vw;
+      }
+  .LOGO2{
+      font-size: 3vw;
+      width: 100%;
+      height: 4vw;
+      letter-spacing: 1.5vw;
+  }
+  .title-bg {
+      height: 32vw;
+  }
+  .sub-title {
+      font-size:3vw;
+      left: 27vw;
+      top:5px;
+      letter-spacing: 0.3vw;
+    }
+    .multi-center{
+      display:inline;
+    }
+    .bottom-text{
+      font-size:3vw;
+    }
+}
