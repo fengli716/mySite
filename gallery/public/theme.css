@@ -150,3 +150,13 @@ nav.pagination a {
 #zip a {
   color: #3399ff;
 }
+header {
+  background: #ffffff;
+  font: 30px ;
+  color: #0a8dff;
+}
+body {
+  background: #1c1c1c;
+  font: 10px sans-serif;
+  color: aliceblue;
+}
